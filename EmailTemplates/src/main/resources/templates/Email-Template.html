@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Form</title>
+    <style>
+        #first
+        {
+         width: 400px;
+            height: 330px;
+            background-color: lightgray;
+            margin-left:30%;
+            margin-top:80px;
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            text-align: center;-->
+        }
+
+        #header
+        {
+        color:red;
+        margin-left:40%;
+        }
+    </style>
+
+</head>
+<body>
+<h1 id="header">Email Form</h1>
+
+<div id="first">
+<form action="#" th:action="@{/sendEmail}" method="post">
+    <label>To:</label><br>
+    <label for="to"></label><input th:text="${to}" style="width:95%" type="email" id="to" name="to" placeholder="Type your mail here"><br><br>
+    <label for="subject">Subject:</label><br>
+    <input  style="width:95%" type="text" id="subject" name="subject" th:text="${subject}"><br><br>
+    <input type="file" value="Attachment"><br><br>
+    <label for="body">Body:</label><br>
+    <textarea id="body" name="body" rows="4" cols="50" th:text="${body}" ></textarea><br><br>
+
+    <input type="submit" value="Send" onclick="send()">
+</form>
+
+<p><a href="#" th:href="@{/forgotPassword}">Forgot Password?</a></p>
+</div>
+</body>
+</html>

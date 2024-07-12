@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+  <style>
+    body
+    {
+    height:100p%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    }
+
+    #first
+    {
+    height:400px;
+    width:400px;
+    border:5px solid grey;
+    display:flex;
+    align-items:center;
+    margin-left:300px;
+    margin-top:100px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="first">
+<h1 style="color:red">Register here :</h1>
+  <form action="process-registration" method="post">
+      <input style="height:20px" type="text" name="username" placeholder="Username" required /><br><br>
+
+      <input style="height:20px" type="email" name="mail" placeholder="Email" required /><br><br>
+
+      <input style="height:20px" type="password" name="password" placeholder="Password" required /><br><br>
+
+      <input type="submit" value="Register" /><br><br>
+
+  </form>
+</div>
+</body>
+</html>
